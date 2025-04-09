@@ -26,7 +26,7 @@ def index():
         if command:
             try:
                 result = parser.parse(command.lower())
-                output = process_command(command, result, output)  # Pass output as a string
+                output = process_command(command, result, None)  # Pass None to get return value
             except Exception as e:
                 output = f"Error: {str(e)}"
                 print(f"Detailed error: {e}")  # For debugging
